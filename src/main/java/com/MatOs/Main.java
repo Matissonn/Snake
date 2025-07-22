@@ -31,7 +31,7 @@ public class Main {
             Window.frame.repaint();
 
         });
-        
+        timer.start();
     }
 
     public static int[] generateApple(){
