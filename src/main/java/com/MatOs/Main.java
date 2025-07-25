@@ -44,20 +44,16 @@ public class Main {
 
     public static void move(){
 
-        System.out.println("First: " + snake.getBody().getFirst().getPosition()[0] + " " + snake.getBody().getFirst().getPosition()[1]);
-
         for(int i = 0 ; i < Window.width ; i++){
             for(int j = 0; j < Window.height ; j++){
                 tiles[i][j] = ' ';
             }
         }
-        System.out.println("Apple: " + apple.getPosition()[0] + " " + apple.getPosition()[1]);
 
         for(int i = snake.getLength() - 1; i > -1; i--){
             snake.getBody().get(i).setPosition(new int[]{snake.getBody().get(i).getPosition()[0] + snake.getBody().get(i).getDirection()[0],
                     snake.getBody().get(i).getPosition()[1] - snake.getBody().get(i).getDirection()[1]});
             if(i > 0) snake.getBody().get(i).setDirection(snake.getBody().get(i - 1).getDirection());
-
         }
 
         for(Segment s : snake.getBody()){

@@ -10,8 +10,8 @@ public class Window extends JPanel implements KeyListener {
     public static JFrame frame;
     public static int unit = 24;
 
-    public static int width = 10;
-    public static int height = 10;
+    public static int width = 15;
+    public static int height = 15;
     public static int snakeWidth = 24;
     public static int appleWidth = 24;
 
